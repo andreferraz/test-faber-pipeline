@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.0](https://github.com/andreferraz/test-faber-pipeline/compare/v0.0.4...v0.1.0) (2025-03-21)
+
+
+### Features
+
+* add comments option for actions ([550ba24](https://github.com/andreferraz/test-faber-pipeline/commit/550ba24b5375172c7fa5b0cc322e24b75e9220f4))
+
 ## [0.0.4](https://github.com/andreferraz/test-faber-pipeline/compare/v0.0.3...v0.0.4) (2025-03-21)
 
 
