@@ -33,6 +33,7 @@ export function validateActions(actions) {
 
 		switch (action.type) {
 			case 'replace':
+				// Comments
 				(function () {
 					const schema = Joi.object({
 						type: Joi.string().valid('replace').required(),
