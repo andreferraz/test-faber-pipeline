@@ -101,21 +101,21 @@ export async function handleExecCommand(options) {
 	try {
 		actions = faber.actions(data);
 	} catch (error) {
-		printError('Preparation error', 'An error occurred reading the actions.', error);
+		printError('! Preparation error', 'An error occurred reading the actions.', error);
 		shell.exit(0);
 	}
 
 	try {
 		validateActions(actions);
 	} catch (error) {
-		printError('Validation error', 'There are invalid action settings or data.', error);
+		printError('! Validation error', 'There are invalid action settings or data.', error);
 		shell.exit(0);
 	}
 
 	try {
 		results = await runActions(actions);
 	} catch (error) {
-		printError('Execution error', 'An error occurred executing the actions.', error);
+		printError('! Execution error', 'An error occurred executing the actions.', error);
 		shell.exit(0);
 	}
 
