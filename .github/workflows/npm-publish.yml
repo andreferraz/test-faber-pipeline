@@ -1,0 +1,23 @@
+name: NPM Publish
+
+on:
+  release:
+    types: [created]
+  workflow_dispatch:
+
+jobs:
+  approval:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Approval
+        run: echo "Waiting for manual approval..."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish-npm:
+    needs: [approval]
+    runs-on: ubuntu-latest
+    steps:
+      # Log github.ref to see what it is
+      - uses: actions/checkout@v3
+      - run: echo ${{ github.ref }}

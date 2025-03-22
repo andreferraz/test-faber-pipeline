@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - release/v*
 
 permissions:
   contents: write
@@ -11,11 +12,27 @@ permissions:
 
 jobs:
   release-please:
-    if: github.head_ref != 'release-please--branches--main'
+    if: ${{ ! contains(github.head_ref, 'release-please--branches--') }}
     runs-on: ubuntu-latest
     steps:
-      - uses: googleapis/release-please-action@v4
+      - name: Outputs
+        id: outputs
+        run: |
+          echo "ref"
+          echo "${{ github.ref }}"
+          echo "head_ref"
+          echo "${{ github.head_ref }}"
+      - name: Release Preparation
+        if: ${{ ! contains(github.ref, 'release/') }}
+        uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+      - name: Pre-Release Preparation
+        if: ${{ contains(github.ref, 'release/') }}
+        uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          config-file: release-please-pre-config.json
           manifest-file: .release-please-manifest.json
