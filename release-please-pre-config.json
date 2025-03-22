@@ -1,11 +1,13 @@
 {
 	"$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
 	"include-v-in-tag": true,
+	"draft": true,
+	"changelog-path": "CHANGELOG.md",
 	"release-type": "node",
 	"include-component-in-tag": false,
+	"prerelease": true,
 	"pull-request-header": "",
 	"pull-request-footer": "",
-	"changelog-type": "github",
 	"packages": {
 		".": {
 			"extra-files": ["index.js"]
