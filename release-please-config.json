@@ -3,8 +3,8 @@
 	"include-v-in-tag": true,
 	"release-type": "node",
 	"include-component-in-tag": false,
-	"pull-request-header": "",
-	"pull-request-footer": "",
+	"pull-request-header": "## Changelog\n",
+	"pull-request-footer": " ",
 	"changelog-type": "github",
 	"packages": {
 		".": {
