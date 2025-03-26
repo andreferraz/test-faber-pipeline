@@ -3,19 +3,20 @@ name: NPM Publish
 on:
   release:
     types: [created]
-  workflow_dispatch:
 
 jobs:
-  approval:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Approval
-        run: echo "Waiting for manual approval..."
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm ci
+      - run: npm test
 
   publish-npm:
-    needs: [approval]
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       # Log github.ref to see what it is
