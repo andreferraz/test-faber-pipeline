@@ -3,9 +3,7 @@
 	"include-v-in-tag": true,
 	"release-type": "node",
 	"include-component-in-tag": false,
-	"pull-request-header": "## Changelog\n",
-	"pull-request-footer": " ",
-	"changelog-type": "github",
+	"pull-request-header": "## 🤖 Release of new version\n",
 	"packages": {
 		".": {
 			"extra-files": ["index.js"]
