@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/andreferraz/test-faber-pipeline/compare/v0.2.0...v0.2.1) (2025-03-26)
+
+
+### Bug Fixes
+
+* update rp config ([88ce14a](https://github.com/andreferraz/test-faber-pipeline/commit/88ce14a72fe1de35fda818532c621ac584259c5d))
+
 ## 0.2.0 (2025-03-26)
 
 **Full Changelog**: https://github.com/andreferraz/test-faber-pipeline/compare/v0.1.1...v0.2.0
