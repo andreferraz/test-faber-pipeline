@@ -21,4 +21,4 @@ jobs:
     steps:
       # Log github.ref to see what it is
       - uses: actions/checkout@v3
-      - run: echo ${{ github.ref }}
+      - run: echo ${{ toJson(github) }}
