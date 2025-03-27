@@ -4,8 +4,6 @@
 
 Faber is a CLI that helps you create/scaffold new projects using custom boilerplates.
 
-You can **prepare your own boilerplates** to make them configurable for creating new projects with Faber, and pass custom parameters, data or actions to execute in the scaffolding of your new project.
-
 ## Summary
 
 - [Getting Started](#getting-started)
