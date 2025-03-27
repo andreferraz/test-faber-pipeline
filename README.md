@@ -1,7 +1,5 @@
 # Faber CLI
 
-> ⚠ This is a work in progress. Before the release of version `1.0.0`, please expect things to change at any time.
-
 Faber is a CLI that helps you create/scaffold new projects using custom boilerplates.
 
 ## Summary
