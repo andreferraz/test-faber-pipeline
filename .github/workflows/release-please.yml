@@ -18,10 +18,8 @@ jobs:
       - name: Outputs
         id: outputs
         run: |
-          echo "ref"
-          echo "${{ github.ref }}"
-          echo "head_ref"
-          echo "${{ github.head_ref }}"
+          echo "github"
+          echo "${{ github }}"
       - name: Release Preparation
         if: ${{ ! contains(github.ref, 'release/') }}
         uses: googleapis/release-please-action@v4
