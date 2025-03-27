@@ -20,11 +20,6 @@ program
 program
    .command('create')
    .arguments('<name>')
-   /* .option('--dry', 'Simulate the actions without making any changes.') */
-   /* .option(
-		'--keep-git',
-		'Prevent removal of the .git folder. Useful to check what has changed on the original boilerplate.'
-	) */
    .option(
       '--use-existing',
       'If the folder already exists, skip the prompt and continue with the existing folder, without cloning the repository.'
