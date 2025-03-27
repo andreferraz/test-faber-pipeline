@@ -19,7 +19,7 @@ jobs:
         id: outputs
         run: |
           echo "github"
-          echo "${{ github }}"
+          echo "${{ toJson(github) }}"
       - name: Release Preparation
         if: ${{ ! contains(github.ref, 'release/') }}
         uses: googleapis/release-please-action@v4
