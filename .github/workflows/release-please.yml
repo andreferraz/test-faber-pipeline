@@ -17,9 +17,9 @@ jobs:
     steps:
       - name: Outputs
         id: outputs
-        run: |
-          echo "github"
-          echo "${{ toJson(github) }}"
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
       - name: Checkout
         uses: actions/checkout@v3
       - name: Release Preparation
