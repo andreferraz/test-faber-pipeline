@@ -27,6 +27,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
+          default-branch: ${{ github.ref_name }}
       - name: Pre-Release Preparation
         if: ${{ contains(github.ref, 'release/') }}
         uses: googleapis/release-please-action@v4
@@ -34,3 +35,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: release-please-pre-config.json
           manifest-file: .release-please-manifest.json
+          default-branch: ${{ github.ref_name }}
