@@ -19,7 +19,7 @@ jobs:
         id: outputs
         run: |
           echo "github"
-          echo "${{ github }}"
+          echo "${{ toJson(github) }}"
       - name: Checkout
         uses: actions/checkout@v3
       - name: Release Preparation
