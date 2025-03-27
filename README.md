@@ -478,11 +478,3 @@ $ faber rm my-boilerplate
 `faber rm <alias>`
 
 - `<alias>` (_mandatory_) – The reference to the boilerplate to remove from your list.
-
-## Mentions
-
-This documentation was inspired by the [Plop](https://plopjs.com/) documentation.
-
-_Plop_ is an amazing micro-framework with a similar goal as _Faber_, however, while _Plop_ is great for generating code inside your project using [Handlebars](https://handlebarsjs.com/) as template engine, _Faber_ is fully focused on starting new projects, with no defined template engine, so you might be able to run the boilerplate project on its own for testing its features with your own.
-
-_P.S. You can use both together in your projects to make your life easier._ 😉
