@@ -15,7 +15,7 @@ const pkg = JSON.parse(await readFile(new URL('./package.json', import.meta.url)
 program
 	.name('faber')
 	.description('A CLI for creating projects from custom boilerplates.')
-	.version(pkg.version, '-v, --version', 'Output the installed version of the CLI');
+	.version(pkg.version, '-v, --version', 'Output the installed version');
 
 program
 	.command('create')
@@ -39,7 +39,10 @@ program
 	)
 	.option('--data <string>', 'Encoded JSON data to be passed to the script')
 	.option('--no-preview', 'Do not show the JSON data preview')
-	.option('--deep-preview', 'Show the JSON data preview with all the properties and array items expanded')
+	.option(
+		'--deep-preview',
+		'Show the JSON data preview with all the properties and array items expanded'
+	)
 	.option('--no-results', 'Do not show the actions results')
 	.description('Creates a new project with a configured boilerplate.')
 	.action(handleCreateCommand);
@@ -49,7 +52,10 @@ program
 	/* .option('--dry', 'Simulate the actions without making any changes.') */
 	.option('--data <string>', 'Encoded JSON data to be passed to the script')
 	.option('--no-preview', 'Do not show the JSON data preview')
-	.option('--deep-preview', 'Show the JSON data preview with all the properties and array items expanded')
+	.option(
+		'--deep-preview',
+		'Show the JSON data preview with all the properties and array items expanded'
+	)
 	.option('--no-results', 'Do not show the actions results')
 	.description('Executes the script inside the current repository (usually for development)')
 	.action(handleExecCommand);
