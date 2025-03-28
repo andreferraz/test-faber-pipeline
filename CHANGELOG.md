@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.0-beta2](https://github.com/andreferraz/test-faber-pipeline/compare/v1.0.0-beta1...v1.0.0-beta2) (2025-03-28)
+
+
+### Features
+
+* **formatting:** change indentation to space ([a88471d](https://github.com/andreferraz/test-faber-pipeline/commit/a88471db2ea1aa4133f0de6099e41570607ae293))
+
 ## [1.0.0-beta1](https://github.com/andreferraz/test-faber-pipeline/compare/v1.0.0-beta0...v1.0.0-beta1) (2025-03-27)
 
 
